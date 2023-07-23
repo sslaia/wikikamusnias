@@ -28,7 +28,7 @@ class WiktionaryBanner extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'wiki_banner_wk',
+            'wiktionary_banner',
             style: fontColorBlack,
           ).tr(),
           Text(

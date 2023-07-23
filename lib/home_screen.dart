@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:wikikamusnias/app_navigation_controls.dart';
 
@@ -57,7 +56,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.sizeOf(context);
 
     return WillPopScope(
       onWillPop: () async {
@@ -81,28 +79,14 @@ class _HomeScreenState extends State<HomeScreen> {
       child: SafeArea(
         child: Scaffold(
           key: scaffoldKey,
-          appBar: media.height > 768
-              ? AppBar(
-                  backgroundColor: appBarBgColor,
-                  title: Text(
-                    'wikinias_slogan',
-                    style: GoogleFonts.grandstander(
-                      textStyle: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.w400,
-                          color: appBarFontColor),
-                    ),
-                  ).tr(),
-                )
-              : null,
           bottomNavigationBar:
               AppNavigationControls(webViewController: webViewController),
-          body: Column(
+          body: Stack(
             children: [
               if (loadingProgress < 100)
                 LinearProgressIndicator(
-                  backgroundColor: Colors.black,
-                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.red),
+                  backgroundColor: Colors.red,
+                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
                   value: loadingProgress / 100.0,
                 ),
               Expanded(child: WebViewWidget(key: webviewKey, controller: webViewController)),

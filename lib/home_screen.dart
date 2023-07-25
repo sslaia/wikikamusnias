@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
                   value: loadingProgress / 100.0,
                 ),
-              Expanded(child: WebViewWidget(key: webviewKey, controller: webViewController)),
+              WebViewWidget(key: webviewKey, controller: webViewController),
             ],
           ),
         ),

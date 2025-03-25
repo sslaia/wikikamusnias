@@ -7,15 +7,18 @@ An app for Nias Wiktionary. Get it from Play Store:
 
 ## Version's history
 
-Planned for future version:
-- Access using MediaWiki API
-- Replace webview with contents from the API
-- Creating new wiki page using a form
+Version 1.0.1+3:
+- Fixed the issue with RenderObjectWidget, that produces empty homepage
 
 Version 1.0.0:
 - Access Wiktionary WebView
 - Internationalization/localization (en, id/nia), easily change the language
 - All important shortcuts to community tools
+
+Planned for future version:
+- Access using MediaWiki API
+- Replace webview with contents from the API
+- Creating new wiki page using a form
 
 
 ## Getting the app
